@@ -5,4 +5,105 @@ image:https://secure.travis-ci.org/darlenya/stream-line-parser.png[Build Status,
 image:https://david-dm.org/darlenya/stream-line-parser.svg[Dependency Status,link=https://david-dm.org/darlenya/stream-line-parser]
 image:https://david-dm.org/darlenya/stream-line-parser/dev-status.svg[devDependency Status,link=https://david-dm.org/darlenya/stream-line-parser#info=devDependencies]
 
-== TODO
+== Header Check
+This modules consumes an object stream as created by https://github.com/darlenya/stream-line-parser[stream-line-tokenizer-csv]
+for example and splits the line into tokens.
+The consumed objects have the following format.
+
+.Line object example
+[source,json]
+----
+{
+  "lineNumber": 1,
+  "data": "['any', 'line', 'data']"
+}
+----
+
+After the header is checked the module will emit an event ''header'' which defines which columns where found
+and on which position they are. All errors found on the header where emitted as ''error'' events.
+
+An error event has this format:
+
+.Error event
+[source,json]
+----
+{
+	"errorCode": "CHECK_HEADER_NO_STRICT_MATCH",
+	"severity": "abort_file",
+	"message": "The expected header [<expectedHeader>] has a different column count to the actual header [<actualHeader>]"
+}
+----
+
+
+This module is for checking the header line of such tokens. It will only read the object
+where ''lineNumber'' is ''0''. All other objects will not be considered.
+
+=== Install
+[source,bash]
+----
+$ npm install stream-line-header
+----
+
+
+=== Usage
+The following code shows example for the option given to the module. For more information what optiona are mandatory
+and what they does refer to the later chaper which describe the json schema for the options.
+
+.Options for the parser
+[source,js]
+----
+{
+	"expectedHeader": ["col_1", "col_2", "col_3", ["col_4", "col 4", "c4"], "col_5", "col_6"],
+  "fieldNames": ["c1", "c2", "c3", "c4", "c5", "c6"],
+  "caseSensitive": true,
+  "strict": {
+    "val": true,
+    "severity": "skip_record"
+  },
+  "additionalColumns": false,
+  "missingColumns": false,
+  "mandatoryColumns": ["c1", "c2", "c3"],
+  "severity": "abort_file"
+}
+----
+
+
+.Usage example
+[source,js]
+----
+const fs = require('fs');
+const lp = require('stream-line-parser');
+const tk = require('stream-line-tokenizer-csv');
+const header = require('stream-line-tokenizer-csv');
+
+let parser = lp({
+  "allow_new_line_in_cell" : true,
+	"line_separator": "\n",
+  "quote_char" : '"',
+  "skip_empty_lines" : true
+});
+
+let tokenizer = tk({
+  "separator_list" : [',', ';'],
+  "quote_char" : '"',
+  "use_quotes" : true,
+  "trim" : true
+  });
+
+let headerCheck = header(options, validate);   // <1>
+
+fs.createReadStream('filename.csv').pipe(parser).pipe(tokenizer).pipe(headerCheck);
+----
+<1> If validate is set to a true value the format of the given options will be validated.
+
+
+This will read the file 'filename.csv'. The stream will be piped to the parser which
+will split the stream in to objects. The parser emits an object stream. This object
+stream will then be piped to the line tokenizer.
+Then the header format will be checked. These checks depends on the defined options.
+
+=== License
+BSD-2-Clause
+
+
+include::doc/schema/header.adoc[]

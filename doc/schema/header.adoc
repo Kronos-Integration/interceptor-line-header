@@ -1,4 +1,4 @@
-== Header
+== Header Options Schema
 Defines if the file has a header and how to use it.
 
 [source,json]
