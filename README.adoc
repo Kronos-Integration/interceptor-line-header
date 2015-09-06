@@ -28,8 +28,8 @@ An error event has this format:
 [source,json]
 ----
 {
-	"errorCode": "CHECK_HEADER_NO_STRICT_MATCH",
-	"severity": "abort_file",
+  "errorCode": "CHECK_HEADER_NO_STRICT_MATCH",
+  "severity": "abort_file",
 	"message": "The expected header [<expectedHeader>] has a different column count to the actual header [<actualHeader>]"
 }
 ----
