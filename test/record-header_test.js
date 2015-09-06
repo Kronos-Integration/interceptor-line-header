@@ -305,7 +305,8 @@ describe("stream-line-header: Run the stream", function () {
 
       assert.deepEqual(objects[0], {
         "lineNumber": 0,
-        "data": ["col_6", "col_3", "col_7", "col 4", "col_9", "col_1"]
+        "data": ["col_6", "col_3", "col_7", "col 4", "col_9", "col_1"],
+        "header": ["c6", "c3", undefined, "c4", undefined, "c1"]
       });
       done();
     }
