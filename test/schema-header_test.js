@@ -8,7 +8,7 @@ const ZSchema = require("z-schema");
 const validator = new ZSchema({});
 const schema = require("../schema/header.json");
 
-describe('header', function () {
+describe('stream-line-header: schema header', function () {
 	it('Valid header all', function () {
 		let valid = validator.validate({
 				"expectedHeader": ["gum", "bo", ["hu", "go"]],

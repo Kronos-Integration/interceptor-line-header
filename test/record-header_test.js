@@ -39,7 +39,7 @@ const checkProperties = {
 
 
 
-describe("data-processor-header: Check amount of checks being created", function () {
+describe("stream-line-header: Check amount of checks being created", function () {
 
   it("Valid 1. Expect all checks to be created", function () {
     const checks = checkHeaderFactory(checkProperties).checks;
@@ -83,7 +83,7 @@ describe("data-processor-header: Check amount of checks being created", function
 
 
 // Run the tests
-describe("data-processor-header: Test additionalColumns columns", function () {
+describe("stream-line-header: Test additionalColumns columns", function () {
   it("Valid header with additional columns", function () {
     let cp = _.clone(checkProperties);
     cp.missingColumns = true;
@@ -112,7 +112,7 @@ describe("data-processor-header: Test additionalColumns columns", function () {
 });
 
 
-describe("data-processor-header: Test missing columns", function () {
+describe("stream-line-header: Test missing columns", function () {
   it("Valid header with missing columns", function () {
     let cp = _.clone(checkProperties);
     cp.missingColumns = true;
@@ -141,7 +141,7 @@ describe("data-processor-header: Test missing columns", function () {
   });
 });
 
-describe("data-processor-header: Test strict check", function () {
+describe("stream-line-header: Test strict check", function () {
   it("Valid header alternative 1", function () {
     let cp = _.clone(checkProperties);
     delete cp.mandatoryColumns;
@@ -213,7 +213,7 @@ describe("data-processor-header: Test strict check", function () {
 
 
 
-describe("data-processor-header: Test mandatory columns", function () {
+describe("stream-line-header: Test mandatory columns", function () {
   it("Valid header", function () {
     let cp = _.clone(checkProperties);
 
@@ -251,7 +251,7 @@ describe("data-processor-header: Test mandatory columns", function () {
   });
 });
 
-describe("data-processor-header: Real column fields", function () {
+describe("stream-line-header: Real column fields", function () {
   it("Check real positions", function () {
     let cp = _.clone(checkProperties);
 
@@ -280,7 +280,7 @@ describe("data-processor-header: Real column fields", function () {
   });
 });
 
-describe("data-processor-header: Run the stream", function () {
+describe("stream-line-header: Run the stream", function () {
 
   it('No errors', function (done) {
 
