@@ -7,7 +7,7 @@ const assert = chai.assert;
 const expect = chai.expect;
 const should = chai.should();
 
-var _ = require('underscore');
+const _ = require('underscore');
 const mockReadStream = require('./mockReadStream');
 
 const checkHeaderFactory = require('../lib/line-header.js');
