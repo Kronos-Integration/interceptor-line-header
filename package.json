@@ -21,26 +21,23 @@
     "debug": false
   },
   "dependencies": {
-    "z-schema": "3.15.2"
+    "z-schema": "3.16.0"
   },
   "devDependencies": {
-    "chai": "3.2.0",
+    "chai": "3.4.1",
     "istanbul": "^0.4.0",
     "jsdoc": "3.3.3",
     "mocha": "2.3.3",
     "underscore": "1.8.3",
     "semantic-release": "4.3.5"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
+  "contributors": [{
+    "name": "Torsten Link",
+    "email": "torstenlink@gmx.de"
+  }, {
+    "name": "Markus Felten",
+    "email": "markus.felten@gmx.de"
+  }],
   "license": "BSD-2-Clause",
   "engines": {
     "node": ">=4.2.1"
