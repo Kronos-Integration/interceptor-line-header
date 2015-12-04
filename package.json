@@ -21,7 +21,7 @@
     "debug": false
   },
   "dependencies": {
-    "z-schema": "3.16.0"
+    "z-schema": "3.16.1"
   },
   "devDependencies": {
     "chai": "3.4.1",
