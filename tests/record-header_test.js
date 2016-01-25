@@ -8,7 +8,7 @@ const expect = chai.expect;
 const should = chai.should();
 
 const _ = require('underscore');
-const mockReadStream = require('./mockReadStream');
+const mockReadStream = require('kronos-test-interceptor').mockReadStreamFactory;
 
 const checkHeaderFactory = require('../lib/line-header.js');
 
