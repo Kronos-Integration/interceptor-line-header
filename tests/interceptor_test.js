@@ -42,7 +42,7 @@ describe('Interceptor test', function () {
       "owner": stepMock,
       "name": "gumboIn"
     };
-    const messageHandler = new InterceptorUnderTest(endpoint, checkProperties);
+    const messageHandler = new InterceptorUnderTest(checkProperties, endpoint);
     assert.ok(messageHandler);
   });
 
@@ -56,7 +56,7 @@ describe('Interceptor test', function () {
       "info": "first message"
     };
 
-    const messageHandler = new InterceptorUnderTest(endpoint, checkProperties);
+    const messageHandler = new InterceptorUnderTest(checkProperties, endpoint);
     const mockReceive = new MockReceiveInterceptor(function (request, oldRequest) {
 
       assert.ok(request);
@@ -72,7 +72,4 @@ describe('Interceptor test', function () {
     messageHandler.receive(sendMessage);
 
   });
-
-
-
 });

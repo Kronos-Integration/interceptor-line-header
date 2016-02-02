@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-line-header#readme",
   "dependencies": {
-    "kronos-interceptor": "^1.4.0",
+    "kronos-interceptor": "^2.0.0",
     "z-schema": "3.16.1"
   },
   "devDependencies": {
     "chai": "3.5.0",
     "istanbul": "^0.4.2",
     "jsdoc": "3.4.0",
-    "kronos-test-interceptor": "^1.7.0",
+    "kronos-test-interceptor": "2.0.1",
     "mocha": "2.4.5",
     "semantic-release": "6.2.0",
     "underscore": "1.8.3"
@@ -39,7 +39,7 @@
   }],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=4.2.1"
+    "node": ">=5"
   },
   "keywords": [
     "kronos-interceptor",
