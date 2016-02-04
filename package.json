@@ -1,10 +1,10 @@
 {
   "name": "kronos-interceptor-line-header",
-  "version": "0.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Splits a line by a sparator into tokens.",
   "main": "index.js",
   "scripts": {
-    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests",
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests/*_test.js",
     "doc": "jsdoc lib/*.js",
     "test": "mocha tests/*_test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "istanbul": "^0.4.2",
+    "istanbul": "0.4.2",
     "jsdoc": "3.4.0",
     "kronos-test-interceptor": "2.0.2",
     "mocha": "2.4.5",
