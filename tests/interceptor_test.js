@@ -21,17 +21,20 @@ const stepMock = {
 };
 
 const checkProperties = {
-  "expectedHeader": ["col_1", "col_2", "col_3", ["col_4", "col 4", "c4"], "col_5", "col_6"],
-  "fieldNames": ["c1", "c2", "c3", "c4", "c5", "c6"],
-  "caseSensitive": true,
-  "strict": {
-    "val": true,
-    "severity": "skip_record"
-  },
-  "additionalColumns": false,
-  "missingColumns": false,
-  "mandatoryColumns": ["gum"],
-  "severity": "abort_file"
+  "type": "line-header",
+  "config": {
+    "expectedHeader": ["col_1", "col_2", "col_3", ["col_4", "col 4", "c4"], "col_5", "col_6"],
+    "fieldNames": ["c1", "c2", "c3", "c4", "c5", "c6"],
+    "caseSensitive": true,
+    "strict": {
+      "val": true,
+      "severity": "skip_record"
+    },
+    "additionalColumns": false,
+    "missingColumns": false,
+    "mandatoryColumns": ["gum"],
+    "severity": "abort_file"
+  }
 };
 
 
