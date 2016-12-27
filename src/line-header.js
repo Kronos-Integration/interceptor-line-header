@@ -494,6 +494,10 @@ function getAdditionalColumnCheck(expectedHeader, caseSensitive, severity) {
 	};
 }
 
-module.exports = function (opts, validate) {
+function LineHeaderFactory(opts, validate) {
 	return new LineHeader(opts, validate);
+}
+
+export {
+	LineHeaderFactory
 };
