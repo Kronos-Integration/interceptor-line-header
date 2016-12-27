@@ -1,20 +1,27 @@
 /* jslint node: true, esnext: true */
 'use strict';
 
-const Interceptor = require('kronos-interceptor').Interceptor;
-const parserFactory = require('./line-header');
+import {
+	Interceptor
+}
+from 'kronos-interceptor';
+
+import { 
+	LineHeaderFactory
+}
+from './line-header';
 
 /**
  * This interceptor cares about the handling of the messages.
  * It will add the hops and copies the messages
  */
-class LineHeaderInterceptor extends Interceptor {
+export default class LineHeaderInterceptor extends Interceptor {
 
 	constructor(config, endpoint) {
 		super(config, endpoint);
 
 		// just validate the config once
-		parserFactory(config.config, true);
+		LineHeaderFactory(config.config, true);
 	}
 
 	static get name() {
@@ -23,12 +30,10 @@ class LineHeaderInterceptor extends Interceptor {
 
 	receive(request, oldRequest) {
 		if (request.payload) {
-			const streamFilter = parserFactory(this.config.config);
+			const streamFilter = LineHeaderFactory(this.config.config);
 			const stream = request.payload;
 			request.payload = stream.pipe(streamFilter);
 		}
 		return this.connected.receive(request, oldRequest);
 	}
 }
-
-exports.Interceptor = LineHeaderInterceptor;
