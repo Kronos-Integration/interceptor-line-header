@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-line-header#readme",
   "dependencies": {
-    "kronos-interceptor": "^2.4.12",
+    "kronos-interceptor": "^2.4.13",
     "z-schema": "3.18.2"
   },
   "devDependencies": {
