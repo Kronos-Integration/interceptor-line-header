@@ -10,5 +10,3 @@ out
 .nyc_output
 .test
 .tmp
-
-npm-debug.log
