@@ -29,7 +29,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "kronos-test-interceptor": "2.1.0",
-    "mocha": "^3.5.2",
+    "mocha": "^3.5.3",
     "semantic-release": "^8.0.0",
     "underscore": "1.8.3",
     "jsdoc-to-markdown": "^3.0.0",
@@ -49,12 +49,21 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=8.5.0"
   },
-  "keywords": ["kronos-interceptor", "stream", "line", "parser"],
+  "keywords": [
+    "kronos-interceptor",
+    "stream",
+    "line",
+    "parser"
+  ],
   "nyc": {
-    "include": ["dist/**/*.js"],
-    "reporter": ["lcov"],
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
     "report-dir": "./coverage"
   },
   "template": {
