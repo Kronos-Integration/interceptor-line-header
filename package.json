@@ -39,7 +39,7 @@
     "chai": "^4.1.2",
     "kronos-test-interceptor": "3.1.1",
     "mocha": "^5.1.1",
-    "semantic-release": "^15.1.8",
+    "semantic-release": "^15.2.0",
     "underscore": "1.9.0",
     "jsdoc-to-markdown": "^4.0.1",
     "markdown-doctest": "^0.9.1",
