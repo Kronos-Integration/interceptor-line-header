@@ -39,3 +39,4 @@ after_script:
   - npm run docs
 after_success:
   - npm run semantic-release
+  - npx semantic-release
