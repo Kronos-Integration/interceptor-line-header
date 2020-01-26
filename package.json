@@ -39,7 +39,7 @@
     "jsdoc-to-markdown": "^5.0.3",
     "kronos-test-interceptor": "3.1.1",
     "markdown-doctest": "^1.0.0",
-    "mocha": "^6.2.2",
+    "mocha": "^7.0.1",
     "nyc": "^14.1.1",
     "rollup": "^1.27.11",
     "semantic-release": "^15.13.31",
