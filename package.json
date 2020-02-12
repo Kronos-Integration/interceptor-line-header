@@ -5,6 +5,7 @@
   "module": "src/module.js",
   "description": "Splits a line by a sparator into tokens.",
   "keywords": [
+    "npm-package-template",
     "kronos-interceptor",
     "stream",
     "line",
@@ -27,7 +28,8 @@
     "precover": "rollup -c",
     "prepare": "rollup -c",
     "pretest": "rollup -c",
-    "test": "mocha tests/*-test.js"
+    "test": "mocha tests/*-test.js",
+    "posttest": "markdown-doctest"
   },
   "dependencies": {
     "kronos-interceptor": "^2.6.0",
@@ -40,12 +42,12 @@
     "markdown-doctest": "^1.0.0",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1",
-    "rollup": "^1.27.11",
+    "rollup": "^1.27.13",
     "semantic-release": "^15.13.31",
     "underscore": "1.9.1"
   },
   "engines": {
-    "node": ">=12.12.0"
+    "node": ">=12.14.0"
   },
   "repository": {
     "type": "git",
