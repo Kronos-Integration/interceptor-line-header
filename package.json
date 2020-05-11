@@ -1,11 +1,9 @@
 {
-  "name": "kronos-interceptor-line-header",
+  "name": "@kronos-integration/interceptor-line-header",
   "version": "0.0.0-semantic-release",
-  "main": "dist/module.js",
-  "module": "src/module.js",
+  "main": "./src/module.mjs",
   "description": "Splits a line by a sparator into tokens.",
   "keywords": [
-    "npm-package-template",
     "kronos-interceptor",
     "stream",
     "line",
@@ -25,24 +23,14 @@
   "scripts": {
     "cover": "nyc --temp-directory build/nyc npm test",
     "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
-    "precover": "rollup -c",
-    "prepare": "rollup -c",
-    "pretest": "rollup -c",
-    "test": "mocha tests/*-test.js",
-    "posttest": "markdown-doctest"
+    "test": "mocha tests/*-test.js"
   },
   "dependencies": {
-    "kronos-interceptor": "^2.6.0",
+    "@kronos-integration/interceptor": "^9.2.0",
     "z-schema": "4.2.3"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "jsdoc-to-markdown": "^5.0.3",
     "kronos-test-interceptor": "3.1.1",
-    "markdown-doctest": "^1.0.0",
-    "mocha": "^6.2.2",
-    "nyc": "^14.1.1",
-    "rollup": "^1.27.13",
     "semantic-release": "^15.13.31",
     "underscore": "1.9.1"
   },
@@ -57,18 +45,6 @@
     "url": "https://github.com/Kronos-Integration/kronos-interceptor-line-header/issues"
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-line-header#readme",
-  "nyc": {
-    "include": [
-      "dist/**/*.js"
-    ],
-    "reporter": [
-      "lcov"
-    ],
-    "report-dir": "./coverage"
-  },
-  "xo": {
-    "space": true
-  },
   "template": {
     "repository": {
       "url": "https://github.com/Kronos-Tools/npm-package-template.git"
