@@ -31,7 +31,7 @@
   "scripts": {
     "prepare": "rollup -c",
     "pretest": "rollup -c",
-    "test": "ava --timeout 2m && mocha tests/*-test.js",
+    "test": "mocha tests/*-test.js && ava --timeout 2m",
     "posttest": "markdown-doctest",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme ./src/module.mjs --section=API",
