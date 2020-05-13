@@ -5,9 +5,7 @@ doc
 *.tmp
 .test
 .tmp
-.gitignore
 .travis.yml
 .vscode
-.markdown-doctest-setup.js
 rollup.config.js
-.nyc_output
+
