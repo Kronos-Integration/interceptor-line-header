@@ -14,8 +14,7 @@
     "kronos-interceptor",
     "stream",
     "line",
-    "parser",
-    "npm-package-template"
+    "parser"
   ],
   "contributors": [
     {
