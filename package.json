@@ -5,8 +5,7 @@
   "type": "module",
   "main": "./src/line-header-intercetor.mjs",
   "exports": {
-    ".": "./src/line-header-intercetor.mjs",
-    "./": "./"
+    ".": "./src/line-header-intercetor.mjs"
   },
   "description": "Splits a line by a sparator into tokens.",
   "keywords": [
