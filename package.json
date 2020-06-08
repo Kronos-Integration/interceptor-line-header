@@ -10,9 +10,9 @@
   "description": "Splits a line by a sparator into tokens.",
   "keywords": [
     "kronos-interceptor",
-    "stream",
     "line",
-    "parser"
+    "parser",
+    "stream"
   ],
   "contributors": [
     {
