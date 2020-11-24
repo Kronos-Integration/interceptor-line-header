@@ -42,7 +42,7 @@
     "c8": "^7.3.5",
     "documentation": "github:arlac77/documentation",
     "semantic-release": "^17.3.0",
-    "underscore": "1.11.0"
+    "underscore": "1.12.0"
   },
   "engines": {
     "node": ">=14.15.1"
