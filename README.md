@@ -9,3 +9,4 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/interceptor-line-header/badge.svg)](https://snyk.io/test/github/Kronos-Integration/interceptor-line-header)
 [![Coverage Status](https://coveralls.io/repos/Kronos-Integration/interceptor-line-header/badge.svg)](https://coveralls.io/github/Kronos-Integration/interceptor-line-header)
 
+# API
