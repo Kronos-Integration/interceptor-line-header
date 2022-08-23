@@ -19,7 +19,7 @@
     *   [Parameters](#parameters)
 *   [constructor](#constructor)
     *   [Parameters](#parameters-1)
-*   [\_transform](#\_transform)
+*   [\_transform](#_transform)
     *   [Parameters](#parameters-2)
 *   [getRealHeaderCheck](#getrealheadercheck)
     *   [Parameters](#parameters-3)
@@ -46,15 +46,15 @@ It will add the hops and copies the messages
 
 ### Parameters
 
-*   `config`  
-*   `endpoint`  
+*   `config` &#x20;
+*   `endpoint` &#x20;
 
 ## constructor
 
 ### Parameters
 
-*   `checkProperty`  
-*   `validate`  
+*   `checkProperty` &#x20;
+*   `validate` &#x20;
 
 ## \_transform
 
@@ -62,9 +62,9 @@ Reads the stream data and split it into lines.
 
 ### Parameters
 
-*   `data`  
-*   `enc`  
-*   `cb`  
+*   `data` &#x20;
+*   `enc` &#x20;
+*   `cb` &#x20;
 
 ## getRealHeaderCheck
 
@@ -100,8 +100,8 @@ returns the Strict header check
 ### Parameters
 
 *   `expectedHeader`  The expected header
-*   `caseSensitive`  
-*   `severity`  
+*   `caseSensitive` &#x20;
+*   `severity` &#x20;
 
 ## getMissingColumnCheck
 
