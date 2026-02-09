@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@kronos-integration/interceptor": "^13.1.24",
-    "z-schema": "8.5.0"
+    "z-schema": "9.0.1"
   },
   "devDependencies": {
     "ava": "^6.4.1",
