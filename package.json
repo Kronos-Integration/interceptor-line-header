@@ -36,7 +36,7 @@
     "lint:docs": "documentation lint ./src**/*.mjs"
   },
   "dependencies": {
-    "@kronos-integration/interceptor": "^13.3.6",
+    "@kronos-integration/interceptor": "^13.3.7",
     "z-schema": "12.4.1"
   },
   "devDependencies": {
